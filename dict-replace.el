@@ -28,3 +28,15 @@
 	  )
     ) 
   )
+
+
+(defun dict-load ()
+  (interactive)
+  (switch-to-buffer-other-window "*map*")
+  (insert-file-contents (read-file-name "Enter dictionary filename: "))
+  (other-window 1)
+  )
+
+
+
+
