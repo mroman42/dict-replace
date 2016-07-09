@@ -1,7 +1,8 @@
 # dict-replace
-Translation and word replacement auxiliary tool for Emacs.
+Translation and word replacement auxiliary tool for Emacs. It was designed to ease the task of translating between languages with a similar grammar, where almost every word can be replaced on-place with its literal translation. Examples of these similar grammar languages would be Spanish-Italian or English-Swedish (I guess (?)).
 
 ![output](https://cloud.githubusercontent.com/assets/5337877/16708704/c135c06e-45fc-11e6-9f96-9b60e3d938c7.gif)
+*Translation example between Catalan and Spanish, almost every word can be translated in-place* 
 
 ## Installation
 
