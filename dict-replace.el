@@ -15,7 +15,7 @@
   (switch-to-buffer-other-window "*map*")
   (goto-char (point-min))
 
-  (if (word-search-forward word nil t)
+  (if (search-forward-regexp (format "^%s" word) nil t)
       (progn
        (word-search-forward "-> ")
        (thing-at-point 'word)
