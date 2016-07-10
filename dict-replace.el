@@ -15,12 +15,9 @@
   (switch-to-buffer-other-window "*map*")
   (goto-char (point-min))
 
-  (if (search-forward-regexp (format "^%s" word) nil t)
-      (progn
-       (word-search-forward "-> ")
+  (if (search-forward-regexp (format "^%s -> " word) nil t)
        (thing-at-point 'word)
-       )
-    
+       
     (let ((trans-word (read-from-minibuffer (format "Enter translation for %s: " word))))
 	  (goto-char (point-max))
 	  (insert (format "\n%s -> %s" word trans-word))
@@ -36,7 +33,3 @@
   (insert-file-contents (read-file-name "Enter dictionary filename: "))
   (other-window 1)
   )
-
-
-
-
