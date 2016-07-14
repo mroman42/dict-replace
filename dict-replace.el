@@ -12,7 +12,7 @@
 
 
 (defun dict-lookup (word)
-  (switch-to-buffer-other-window "*map*")
+  (switch-to-buffer-other-window "*dict*")
   (goto-char (point-min))
 
   (if (search-forward-regexp (format "^%s -> " word) nil t)
@@ -29,7 +29,7 @@
 
 (defun dict-load ()
   (interactive)
-  (switch-to-buffer-other-window "*map*")
+  (switch-to-buffer-other-window "*dict*")
   (insert-file-contents (read-file-name "Enter dictionary filename: "))
   (other-window 1)
   )
